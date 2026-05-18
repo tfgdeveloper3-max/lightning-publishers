@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '../styles/process.module.css';
 
 const STEPS = [
