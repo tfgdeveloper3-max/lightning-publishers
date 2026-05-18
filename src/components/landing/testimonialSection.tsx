@@ -35,7 +35,6 @@ const TESTIMONIALS = [
 ];
 
 const CARDS_PER_PAGE = 3;
-const TOTAL_DOTS = Math.ceil(TESTIMONIALS.length / CARDS_PER_PAGE);
 
 export default function TestimonialsSection() {
     const [activeDot, setActiveDot] = useState(2); // 3rd dot active like reference
