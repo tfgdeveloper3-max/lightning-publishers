@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+/* ── SECTION ── */
+.section {
+    position: relative;
+    width: 100%;
+    padding: 80px 0 90px;
+    font-family: 'Raleway', Arial, sans-serif;
+    overflow: hidden;
+    background-color: #fafafb;
+}
+
+.sectionBg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1.5;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.topRow {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 48px;
+    align-items: flex-start;
+    margin-bottom: 64px;
+}
+
+.topLeft {
+    padding-top: 8px;
+}
+
+.heading {
+    font-size: clamp(3rem, 4.5vw, 3.5rem);
+    font-weight: 900;
+    color: #e85d1a;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.headingUnderline {
+    width: 120px;
+    height: 3px;
+    background: #e85d1a;
+    border-radius: 2px;
+    margin-bottom: 24px;
+}
+
+.topDesc {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333333;
+    line-height: 1.75;
+    max-width: 380px;
+}
+
+/* ── BANNER ── */
+.banner {
+    background: #e85d1a;
+    border-radius: 12px;
+    display: flex;
+    align-items: stretch;
+    overflow: visible;
+    box-shadow: 0 8px 32px rgba(232, 93, 26, 0.35);
+    min-height: 200px;
+    position: relative;
+}
+
+.bannerLeft {
+    flex: 1;
+    padding: 32px 32px 32px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    z-index: 2;
+}
+
+.bannerTitle {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.35;
+}
+
+.bannerBtns {
+    display: flex;
+    gap: 12px;
+}
+
+.bannerBtnOutline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.22s;
+    white-space: nowrap;
+}
+
+.bannerBtnOutline:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.bannerBtnSolid {
+    padding: 10px 24px;
+    border-radius: 6px;
+    background: #c0391a;
+    color: #ffffff;
+    border: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.22s;
+    white-space: nowrap;
+}
+
+.bannerBtnSolid:hover {
+    background: #a82e14;
+}
+
+/* ── SINGLE IMAGE WITH OVERLAP FROM TOP ── */
+.bannerImg {
+    flex-shrink: 0;
+    width: 240px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+.booksImage {
+    width: 280px;
+    object-fit: contain;
+    object-position: top;
+    display: block;
+    filter: drop-shadow(-8px 4px 12px rgba(0, 0, 0, 0.35));
+    margin-top: -40px;
+    margin-right: 10px;
+}
+
+/* ── SERVICES GRID ── */
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 40px;
+}
+
+.serviceCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 24px;
+    border-radius: 12px;
+    transition: all 0.35s ease;
+    cursor: pointer;
+    background: transparent;
+}
+
+.serviceCard:hover {
+    background: linear-gradient(135deg, #fff7f4 0%, #ffece5 100%);
+    box-shadow: 0 12px 28px rgba(232, 93, 26, 0.12);
+    transform: translateY(-6px);
+}
+
+.iconWrap {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.cardTitle {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.cardDesc {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555555;
+    line-height: 1.72;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+    .topRow {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .topDesc {
+        max-width: 100%;
+    }
+
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 32px;
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 56px 0 64px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .servicesGrid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .banner {
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    .bannerImg {
+        width: 100%;
+        height: 200px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .booksImage {
+        margin-bottom: 0;
+        margin-right: 0;
+        max-width: 180px;
+        margin-top: -30px;
+    }
+
+    .bannerBtns {
+        flex-direction: column;
+    }
+
+    .bannerBtnOutline,
+    .bannerBtnSolid {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}

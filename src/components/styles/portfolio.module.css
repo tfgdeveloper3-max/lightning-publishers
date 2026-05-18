@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+/* ── SECTION ── */
+.section {
+    position: relative;
+    width: 100%;
+    padding: 80px 0 60px;
+    font-family: 'Raleway', Arial, sans-serif;
+    overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 20, 20, 0.6);
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ── HEADING ── */
+.headingWrap {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.heading {
+    font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 14px;
+}
+
+.subDesc {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.7;
+}
+
+/* ── TABS ── */
+.tabsWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    padding: 10px 24px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.tab:hover {
+    color: #ffffff;
+    border-color: #e85d1a;
+    background: rgba(232, 93, 26, 0.15);
+}
+
+.tabActive {
+    background: #e85d1a !important;
+    color: #ffffff !important;
+    border-color: #e85d1a !important;
+    box-shadow: 0 4px 16px rgba(232, 93, 26, 0.45);
+}
+
+/* ── SLIDER ── */
+.sliderOuter {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    --marquee-speed: 35s;
+}
+
+.fadeLeft,
+.fadeRight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.fadeLeft {
+    left: 0;
+    background: linear-gradient(to right, rgba(20, 20, 20, 0.95), transparent);
+}
+
+.fadeRight {
+    right: 0;
+    background: linear-gradient(to left, rgba(20, 20, 20, 0.95), transparent);
+}
+
+.sliderViewport {
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.sliderViewport.fading {
+    opacity: 0;
+}
+
+.sliderTrack {
+    display: flex;
+    width: max-content;
+    animation: marquee var(--marquee-speed) linear infinite;
+    padding: 10px 0 20px;
+}
+
+.sliderTrack:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slideItem {
+    flex: 0 0 auto;
+    padding: 0 12px;
+    transition: transform 0.35s ease;
+}
+
+.slideItem:hover {
+    transform: translateY(-10px);
+}
+
+.bookImg {
+    width: 240px;
+    height: 350px;
+    object-fit: contain;
+    object-position: center top;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+}
+
+.slideItem:hover .bookImg {
+    transform: scale(1.05);
+    box-shadow: 0 12px 36px rgba(232, 93, 26, 0.35);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+    .bookImg {
+        width: 200px;
+        height: 300px;
+    }
+
+    .sliderOuter {
+        --marquee-speed: 28s;
+    }
+
+    .fadeLeft,
+    .fadeRight {
+        width: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0 40px;
+    }
+
+    .container {
+        padding: 0 24px;
+    }
+
+    .tabsWrap {
+        gap: 6px;
+        margin-bottom: 36px;
+    }
+
+    .tab {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+    }
+
+    .bookImg {
+        width: 170px;
+        height: 250px;
+    }
+
+    .slideItem {
+        padding: 0 8px;
+    }
+
+    .fadeLeft,
+    .fadeRight {
+        width: 50px;
+    }
+
+    .sliderOuter {
+        --marquee-speed: 22s;
+    }
+}
+
+@media (max-width: 500px) {
+    .section {
+        padding: 48px 0 32px;
+    }
+
+    .heading {
+        font-size: 1.75rem;
+    }
+
+    .subDesc {
+        font-size: 0.95rem;
+    }
+
+    .tabsWrap {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 0 24px 8px;
+    }
+
+    .tabsWrap::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tab {
+        flex-shrink: 0;
+        padding: 8px 14px;
+        font-size: 0.7rem;
+    }
+
+    .bookImg {
+        width: 140px;
+        height: 210px;
+    }
+
+    .slideItem {
+        padding: 0 6px;
+    }
+
+    .fadeLeft,
+    .fadeRight {
+        width: 35px;
+    }
+
+    .sliderOuter {
+        --marquee-speed: 18s;
+    }
+}

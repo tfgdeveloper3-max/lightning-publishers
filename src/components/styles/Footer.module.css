@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+.footer {
+    width: 100%;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.topStrip {
+    background: #e85d1a;
+    padding: 20px 0;
+}
+
+.stripInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.stripLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stripLabel {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.stripSub {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.82);
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.stripRight {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.stripPhone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    transition: opacity 0.2s;
+}
+
+.stripPhone:hover {
+    opacity: 0.85;
+}
+
+.stripBtn {
+    padding: 10px 24px;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #e85d1a;
+    border: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.22s;
+    white-space: nowrap;
+}
+
+.stripBtn:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+/* ── MAIN BODY ── */
+.body {
+    background: #111111;
+    padding: 64px 0 48px;
+}
+
+.bodyInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1.4fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Brand col */
+.brandCol {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.logoWrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    text-decoration: none;
+}
+
+.logoText {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logoBrand {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.logoSub {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(232, 93, 26, 0.4);
+    padding-top: 3px;
+    margin-top: 3px;
+    text-align: center;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.brandDesc {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.72;
+    margin-bottom: 24px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+/* Newsletter */
+.newsletterLabel {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.newsletterForm {
+    display: flex;
+    gap: 0;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.newsletterInput {
+    flex: 1;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: none;
+    outline: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff;
+    min-width: 0;
+}
+
+.newsletterInput::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.newsletterBtn {
+    padding: 10px 18px;
+    background: #e85d1a;
+    color: #ffffff;
+    border: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.22s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.newsletterBtn:hover {
+    background: #d44d0a;
+}
+
+/* Socials */
+.socials {
+    display: flex;
+    gap: 8px;
+}
+
+.socialBtn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: all 0.22s;
+    flex-shrink: 0;
+}
+
+.socialBtn:hover {
+    background: #e85d1a;
+    border-color: #e85d1a;
+    color: #ffffff;
+}
+
+/* Nav cols */
+.navCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.navHeading {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.logoImg {
+    width: 250px;
+    height: auto;
+}
+
+.navDivider {
+    width: 32px;
+    height: 2px;
+    background: #e85d1a;
+    border-radius: 1px;
+    margin-bottom: 16px;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    transition: color 0.2s;
+    line-height: 1.4;
+}
+
+.navLink:hover {
+    color: #e85d1a;
+}
+
+.navArrow {
+    color: #e85d1a;
+    font-size: 1.2rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* Contact col */
+.contactCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contactItem svg {
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.contactLabel {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.contactValue {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    line-height: 1.45;
+    transition: color 0.2s;
+    display: block;
+}
+
+a.contactValue:hover {
+    color: #e85d1a;
+}
+
+/* ── BOTTOM BAR ── */
+.bottomBar {
+    background: #0a0a0a;
+    border-top: 1px solid rgba(232, 93, 26, 0.2);
+    padding: 16px 0;
+}
+
+.bottomInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.copyright {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.35);
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.legalLinks {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legalLink {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    transition: color 0.2s;
+}
+
+.legalLink:hover {
+    color: #e85d1a;
+}
+
+.legalDot {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+    .bodyInner {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 32px;
+    }
+
+    .contactCol {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .bodyInner {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+
+    .brandCol {
+        grid-column: 1 / -1;
+    }
+
+    .contactCol {
+        grid-column: 1 / -1;
+    }
+
+    .stripInner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .stripInner,
+    .bodyInner,
+    .bottomInner {
+        padding: 0 20px;
+    }
+
+    .topStrip {
+        padding: 18px 0;
+    }
+
+    .body {
+        padding: 48px 0 36px;
+    }
+
+    .bodyInner {
+        grid-template-columns: 1fr;
+    }
+
+    .bottomInner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .stripRight {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .stripBtn {
+        width: 100%;
+        text-align: center;
+    }
+}

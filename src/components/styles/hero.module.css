@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #5a2a0a;
+}
+
+.heroBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.heroBg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(210, 100, 40, 0.50) 0%,
+            rgba(230, 120, 60, 0.45) 20%,
+            rgba(200, 90, 30, 0.55) 40%,
+            rgba(180, 70, 20, 0.60) 80%);
+}
+
+.topbar {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 48px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logoWrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logoSvg {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.logoText {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logoBrand {
+    font-size: 1.55rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.logoSub {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 3px;
+    margin-top: 3px;
+    text-align: center;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.topbarRight {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.contactItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.contactLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.contactValue {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.contactValueChat {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: #ffffff;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.heroBody {
+    position: relative;
+    z-index: 5;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 430px;
+    gap: 40px;
+    align-items: center;
+    padding: 48px 48px 64px;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.heroLeft {
+    color: #ffffff;
+}
+
+.logoImg {
+    width: 250px;
+    height: auto;
+    padding-left: 40px;
+}
+
+.heroTitle {
+    font-size: clamp(3rem, 4.5vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.28);
+    margin-bottom: 22px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.heroDesc {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.78;
+    color: rgba(255, 255, 255, 0.93);
+    max-width: 580px;
+    margin-bottom: 26px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.servicesHeading {
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 14px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    margin-bottom: 36px;
+}
+
+.serviceItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.45;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.serviceDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #e85d1a;
+    flex-shrink: 0;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.heroBtns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btnPrimary {
+    padding: 14px 36px;
+    border-radius: 8px;
+    /* 👈 Reference jaisa button shape */
+    background: #e85d1a;
+    color: #ffffff;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-transform: uppercase;
+}
+
+.btnPrimary:hover {
+    background: #ff6b2b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(232, 93, 26, 0.5);
+}
+
+.btnSecondary {
+    padding: 14px 36px;
+    border-radius: 8px;
+    /* 👈 Reference jaisa button shape */
+    background: #111111;
+    color: #ffffff;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.25s;
+    text-transform: uppercase;
+}
+
+.btnSecondary:hover {
+    background: #222222;
+    transform: translateY(-2px);
+}
+
+/* RIGHT FORM - TRANSPARENT/GLASSY */
+.formWrap {
+    background: rgba(0, 0, 0, 0.55);
+    /* 👈 Dark transparent background */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    /* 👈 Glassy blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* 👈 Subtle border */
+}
+
+.formHeader {
+    background: transparent;
+    /* 👈 Transparent header */
+    padding: 24px 28px 14px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.formHeaderTop {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    /* 👈 White text */
+    margin-bottom: 4px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.formHeaderDiscount {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #ff4d00;
+    /* 👈 Vibrant red/orange */
+    line-height: 1.1;
+    font-family: 'Raleway', Arial, sans-serif;
+    animation: discountPulse 1.5s infinite alternate;
+    display: inline-block;
+}
+
+@keyframes discountPulse {
+    0% {
+        transform: scale(1);
+        color: #ff4d00;
+        text-shadow: 0 0 0 rgba(255, 77, 0, 0);
+    }
+
+    100% {
+        transform: scale(1.06);
+        color: #ff2200;
+        text-shadow: 0 0 20px rgba(255, 34, 0, 0.7);
+    }
+}
+
+.formSubheader {
+    background: rgba(232, 93, 26, 0.9);
+    /* 👈 Slightly transparent orange */
+    padding: 12px 24px;
+    text-align: center;
+}
+
+.formSubheaderText {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.45;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.formBody {
+    padding: 22px 24px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formInput {
+    width: 100%;
+    padding: 13px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.4);
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.formInput:focus {
+    border-color: #e85d1a;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.formInput::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.phoneWrap {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.phoneWrap:focus-within {
+    border-color: #e85d1a;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.phoneFlag {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 12px 0 16px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    height: 46px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: 'Raleway', Arial, sans-serif;
+    flex-shrink: 0;
+}
+
+.phoneInput {
+    flex: 1;
+    padding: 13px 18px;
+    border: none;
+    outline: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background: transparent;
+    min-width: 0;
+}
+
+.phoneInput::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.formSelect {
+    width: 100%;
+    padding: 13px 42px 13px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    outline: none;
+    appearance: none;
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23aaa' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); */
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.formSelect:focus {
+    border-color: #e85d1a;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.checkboxWrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0 4px;
+}
+
+.checkboxWrap input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    accent-color: #e85d1a;
+    cursor: pointer;
+}
+
+.checkboxLabel {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.55;
+    cursor: pointer;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.linkOrange {
+    color: #ff6b2b;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.linkYellow {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.btnReserve {
+    width: 100%;
+    padding: 16px;
+    border-radius: 6px;
+    background: #e85d1a;
+    color: #ffffff;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s;
+    margin-top: 4px;
+}
+
+.btnReserve:hover {
+    background: #ff6b2b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(232, 93, 26, 0.5);
+}
+
+.chatBubble {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #e85d1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(232, 93, 26, 0.4);
+    transition: transform 0.2s;
+    z-index: 100;
+    border: none;
+}
+
+.chatBubble:hover {
+    transform: scale(1.08);
+}
+
+@media (max-width: 960px) {
+    .heroBody {
+        grid-template-columns: 1fr;
+        padding: 36px 28px 48px;
+    }
+
+    .formWrap {
+        max-width: 460px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .topbar {
+        padding: 12px 20px;
+    }
+
+    .topbarRight {
+        gap: 20px;
+    }
+
+    .heroBody {
+        padding: 28px 18px 40px;
+        gap: 28px;
+    }
+
+    .servicesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .heroBtns {
+        flex-direction: column;
+    }
+
+    .btnPrimary,
+    .btnSecondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .topbarRight {
+        display: none;
+    }
+
+    .heroTitle {
+        font-size: 1.75rem;
+    }
+}

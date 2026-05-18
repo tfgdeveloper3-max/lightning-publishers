@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+.section {
+    width: 100%;
+    background: #ffffff;
+    padding: 80px 0 90px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ── HEADING ── */
+.headingWrap {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.heading {
+    font-size:  clamp(2.5rem, 4.5vw, 3.5rem);
+    font-weight: 900;
+    color: #e85d1a;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.subDesc {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #444444;
+    line-height: 1.72;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.sideCard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+}
+
+.sidePhoto {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.sidePhotoImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.sideDark {
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 28px;
+    gap: 0;
+}
+
+.ribbonWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: -1px;
+    position: relative;
+}
+
+.ribbon {
+    background: #c0000a;
+    padding: 10px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.ribbonArrowLeft {
+    width: 0;
+    height: 0;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+    border-right: 18px solid #c0000a;
+    flex-shrink: 0;
+    filter: brightness(0.6);
+}
+
+.ribbonArrowRight {
+    width: 0;
+    height: 0;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+    border-left: 18px solid #c0000a;
+    flex-shrink: 0;
+    filter: brightness(0.6);
+}
+
+.ribbonLogo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    font-family: 'Raleway', Arial, sans-serif;
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+    letter-spacing: 0.02em;
+}
+
+.ribbonZ {
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+
+.ribbonSub {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    margin-left: 4px;
+    letter-spacing: 0.06em;
+    align-self: flex-end;
+    padding-bottom: 1px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+/* Side text */
+.sideText {
+    text-align: center;
+    padding: 24px 20px 20px;
+}
+
+.sideTextTop {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.1;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.sideTextMid {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.sideTextHire {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.sideTextExperts {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+/* Live Chat */
+.liveChatWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 4px;
+}
+
+.liveChatBtn {
+    background: #c0000a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 32px;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.22s;
+    flex: 1;
+    max-width: 200px;
+}
+
+.liveChatBtn:hover {
+    background: #a00008;
+}
+
+.liveChatArrowLeft {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 16px solid #555555;
+    flex-shrink: 0;
+}
+
+.liveChatArrowRight {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 16px solid #555555;
+    flex-shrink: 0;
+}
+
+/* ── FEATURES GRID ── */
+.featuresGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-content: start;
+}
+
+.featureCard {
+    background: #f0f0f0;
+    border-radius: 8px;
+    padding: 24px 22px 22px;
+    transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+    background: #e85d1a;
+    box-shadow: 0 6px 24px rgba(255, 98, 0, 0.3);
+}
+
+.featureCard:hover .featureTitle {
+    color: #ffffff;
+}
+
+.featureCard:hover .featureDesc {
+    color: #ffffff;
+}
+
+.featureTitle {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    font-family: 'Raleway', Arial, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.featureDesc {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #555555;
+    line-height: 1.68;
+    font-family: 'Raleway', Arial, sans-serif;
+    transition: color 0.3s ease;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+    .body {
+        grid-template-columns: 1fr;
+    }
+
+    .sideCard {
+        max-width: 380px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 580px) {
+    .section {
+        padding: 56px 0 64px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .featuresGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+}

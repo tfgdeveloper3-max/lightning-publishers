@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+/* ══════════════════════════════════════
+   SECTION 1 — CATEGORY
+══════════════════════════════════════ */
+.catSection {
+    width: 100%;
+    background: #ffffff;
+    padding: 120px 0 80px; 
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    overflow: visible; 
+}
+
+.catContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2; 
+}
+
+.catHeading {
+    font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+    font-weight: 900;
+    color: #e85d1a;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 36px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+/* ── TABS ── */
+.tabsWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 56px;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.tab {
+    padding: 12px 22px;
+    background: transparent;
+    color: #1a1a1a;
+    border: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    position: relative;
+    bottom: -2px;
+    border-bottom: 2px solid transparent;
+}
+
+.tab:hover {
+    color: #e85d1a;
+}
+
+.tabActive {
+    background: #e85d1a !important;
+    color: #ffffff !important;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 2px solid #e85d1a !important;
+}
+
+/* ── PANEL ── */
+.panelWrap {
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end; 
+}
+
+.panelLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.panelTitle {
+    font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+    font-weight: 900;
+    color: #e85d1a;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 18px;
+}
+
+.panelDesc {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #444444;
+    line-height: 1.75;
+    margin-bottom: 32px;
+    max-width: 500px;
+}
+
+.panelBtns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btnOutline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    border-radius: 5px;
+    background: transparent;
+    color: #1a1a1a;
+    border: 2px solid #cccccc;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.22s;
+    white-space: nowrap;
+}
+
+.btnOutline:hover {
+    border-color: #e85d1a;
+    color: #e85d1a;
+}
+
+.btnSolid {
+    padding: 11px 28px;
+    border-radius: 5px;
+    background: #e85d1a;
+    color: #ffffff;
+    border: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.22s;
+}
+
+.btnSolid:hover {
+    background: #d44d0a;
+    transform: translateY(-1px);
+}
+
+.panelRight {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* ⬇️ Image ko section se bahar nikalne ke liye */
+    margin-top: -100px; 
+}
+
+.imgBox {
+    background: #000000;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 420px;
+    min-height: 320px;
+}
+
+.panelImg {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* ══════════════════════════════════════
+   SECTION 2 — CTA BANNER
+══════════════════════════════════════ */
+.ctaSection {
+    width: 100%;
+    background: #1a1a1a;
+    /* ⬇️ Top padding badaya taake image overlap kare toh content na chupe */
+    padding: 120px 0 64px; 
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    overflow: visible; /* ⬇️ Image bahar aane de */
+}
+
+/* Background Image Fix */
+.bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+/* ⬇️ Dark overlay so text is readable over the image */
+.bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* Adjust darkness here */
+    z-index: 1;
+}
+
+.ctaContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: end; /* ⬇️ Both columns aligned at bottom */
+    position: relative;
+    z-index: 2; /* ⬇️ Keep text above the dark overlay */
+}
+
+.ctaLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.ctaHeading {
+    font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.ctaDesc {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85); /* ⬇️ Made slightly brighter */
+    line-height: 1.72;
+    max-width: 580px;
+    margin-bottom: 32px;
+}
+
+.ctaBtns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ctaBtnOutline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 20px;
+    border-radius: 5px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.22s;
+    white-space: nowrap;
+}
+
+.ctaBtnOutline:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.ctaBtnGhost {
+    padding: 11px 24px;
+    border-radius: 5px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.22s;
+    white-space: nowrap;
+}
+
+.ctaBtnGhost:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.ctaBtnSolid {
+    padding: 11px 28px;
+    border-radius: 5px;
+    background: #e85d1a;
+    color: #ffffff;
+    border: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.22s;
+    white-space: nowrap;
+}
+
+.ctaBtnSolid:hover {
+    background: #d44d0a;
+    transform: translateY(-1px);
+}
+
+.ctaRight {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    /* ⬇️ Image ko section se bahar nikalne ke liye */
+    margin-top: -100px; 
+}
+
+.ctaImg {
+    width: 480px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(-8px 8px 24px rgba(0, 0, 0, 0.5));
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+    .panelWrap {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .panelRight {
+        margin-top: 0; /* Reset overlap on tablet/mobile */
+    }
+
+    .imgBox {
+        max-width: 100%;
+    }
+
+    .ctaContainer {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        align-items: center;
+    }
+
+    .ctaRight {
+        justify-content: flex-start;
+        margin-top: 0; /* Reset overlap on tablet/mobile */
+    }
+
+    .ctaImg {
+        width: 250px;
+    }
+}
+
+@media (max-width: 640px) {
+    .catSection {
+        padding: 80px 0 56px; /* Less top padding on mobile */
+    }
+
+    .catContainer,
+    .ctaContainer {
+        padding: 0 20px;
+    }
+
+    .tabsWrap {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 0;
+        scrollbar-width: none;
+    }
+
+    .tabsWrap::-webkit-scrollbar {
+        display: none;
+    }
+
+    .ctaSection {
+        padding: 80px 0 48px; /* Less top padding on mobile */
+    }
+
+    .ctaBtns {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ctaBtnOutline,
+    .ctaBtnGhost,
+    .ctaBtnSolid {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
